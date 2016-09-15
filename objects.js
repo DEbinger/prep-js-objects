@@ -26,8 +26,14 @@ console.log(plainBox);
             - add a key named `driver` and set it to be `null`.
             - add a key named `passengers` and set it to be an empty array.
  */
-
-
+var stockCar = {
+    model: "Ford",
+    year: 2008,
+    automaticTransmission: true,
+    driver: null,
+    passengers: []
+};
+console.log(stockCar);
 /*
     Add new property inside a function
 
