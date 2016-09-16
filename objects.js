@@ -164,12 +164,16 @@ printProcessedOrders(arrayOfObjects);
         Go ahead and create some more objects and pass them to this function. Have fun with it.
 */
 var sumObj = {};
-    sumObj.a = 3;
-    sumObj.b = 5;
+    sumObj.a = 42;
+    sumObj.b = 846;
     sumObj.result = undefined;
+    sumObj.c = 10;
+    sumObj.d = 20;
+    sumObj.result2 = undefined;
     function objectAddition(obj) {
         obj.result = obj.a + obj.b;
-        return obj;
+        obj.result2 = obj.c + obj.d;
+                return obj;
     }
 
 var sumObjResult = objectAddition(sumObj);
@@ -187,7 +191,17 @@ console.log(sumObjResult);
 
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or **create more** objects and invoke your function multiple times.
  */
+function printObj(obj) {
+    obj.output = "'"+obj.a + " + " + obj.b + " = " + obj.result+"'";
+    return (obj.output);
+}
+console.log(printObj(sumObj));
 
+function printObj2(obj) {
+    obj.output = "'"+obj.c + " + " + obj.d + " = " + obj.result2+"'";
+    return (obj.output);
+}
+console.log(printObj2(sumObj));
 
 /*
     # Putting stuff in `plainBox`
