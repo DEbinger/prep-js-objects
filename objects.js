@@ -246,8 +246,19 @@ console.log(isAutomaticTransmission);
 
         Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect your results. Consider using `plainPerson` as your driver.
  */
+function addDriver(car,person) {
+    car.driver = person;
+    return car;
+}
+var stockCarWithDriver = addDriver(stockCar,plainPerson);
+console.log(stockCarWithDriver);
 
+var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
+var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
 
+function addPassengers(car,names,ages) {
+    
+}
 /*
     # Final Boss
     The Dev League instructors want to ride your whip!
