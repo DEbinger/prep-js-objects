@@ -145,9 +145,14 @@ var arrayOfObjects = [
   }
 ];
 function printProcessedOrders(orders) {
-    return arrayOfObjects;
+    for (var i = 0; i < orders.length; i++) {
+        console.log("=====");
+        console.log("id: " + i);
+        console.log("purchase date: " + orders[i].date);
+        console.log("purchase total: " + orders[i].total);
+    }
 }
-console.log(arrayOfObjects);
+printProcessedOrders(arrayOfObjects);
 /*
     # Addition with an object
         Declare a new variable named sumObj and set it to be a new object with the properties `a`, `b`, and `result`. Properties 'a' and 'b' will be set to a number and result will be 'undefined.'
