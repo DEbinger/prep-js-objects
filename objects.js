@@ -163,8 +163,17 @@ printProcessedOrders(arrayOfObjects);
 
         Go ahead and create some more objects and pass them to this function. Have fun with it.
 */
+var sumObj = {};
+    sumObj.a = 3;
+    sumObj.b = 5;
+    sumObj.result = undefined;
+    function objectAddition(obj) {
+        obj.result = obj.a + obj.b;
+        return obj;
+    }
 
-
+var sumObjResult = objectAddition(sumObj);
+console.log(sumObjResult);    
 /*
     # Print sum function and add as new key-value
         Declare a new function named printObj and a single parameter which will be the object from the challenge just above. Within this function you are to print to the screen a message of the operation performed. For Example:
