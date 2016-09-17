@@ -245,20 +245,40 @@ console.log(isAutomaticTransmission);
         Declare a function named addDriver with two parameters. The first parameter will be an object with represents a **car**, the other will be a **person**. Within this function, set the `driver` value of the **stockCar** to the second parameter being passed into your function.
 
         Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect your results. Consider using `plainPerson` as your driver.
- */
-function addDriver(car,person) {
+/* */
+/*function addDriver(car,person) {
     car.driver = person;
     return car;
 }
 var stockCarWithDriver = addDriver(stockCar,plainPerson);
 console.log(stockCarWithDriver);
-
+*/
 var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
 var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
 
 function addPassengers(car,names,ages) {
-    
+        for (var i = 0; i < names.length; i++){
+        var newAddPassenger = {};
+        car.passengers.push (buildPerson(newAddPassenger,names[i],ages[i]));
+         /*car.passengers.[i] = buildPerson(newAddPassenger,names[i],ages[i]);*/// this works same as above
+         }
+        
+    return car;
 }
+console.log(addPassengers(stockCar, passengerList, passengerAges));
+/*  
+var plainPerson = {};
+function buildPerson(person, nameString, age) {
+    person.name = nameString;
+    person.age = age;
+    return person;
+}
+console.log(buildPerson(plainPerson,"Luke",30));
+
+var completePerson = buildPerson(plainPerson, "Luke", 30);
+console.log(completePerson);
+console.log(completePerson.name);
+console.log(completePerson.age);*/
 /*
     # Final Boss
     The Dev League instructors want to ride your whip!
@@ -291,4 +311,11 @@ function addPassengers(car,names,ages) {
         'Marifel, age 19, is riding dirty!'
         'Victor, age 19, is riding dirty!'
  */
+function displayPassengers(car){
+  for(var i = 0; i<car.passengers.length; i++){
+   console.log("'"+car.passengers[i].name + ", " + 'age ' + car.passengers[i].age + ", " + ' is ridin dirty!');
+  }
+  return car;
+}
 
+displayPassengers(stockCar);
